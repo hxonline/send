@@ -19,9 +19,7 @@ module.exports = function(trigger) {
           <h1 class="text-3xl font-bold text-center lg:text-left">
             ${state.translate('accountBenefitTitle')}
           </h1>
-          <ul
-            class="leading-normal text-grey-darkest my-2 mt-4 pl-4 md:self-center"
-          >
+          <ul class="leading-normal text-grey-80 my-2 mt-4 pl-4 md:self-center">
             <li>
               ${state.translate('accountBenefitLargeFiles', {
                 size: bytes(state.LIMITS.MAX_FILE_SIZE)
@@ -42,7 +40,7 @@ module.exports = function(trigger) {
             <input
               id="email-input"
               type="email"
-              class="${hidden} border rounded-lg w-full px-2 py-1 h-12 mb-3 text-lg text-grey-darker leading-loose"
+              class="${hidden} border rounded-lg w-full px-2 py-1 h-12 mb-3 text-lg text-grey-70 leading-loose"
               placeholder=${state.translate('emailPlaceholder')}
             />
             <input
@@ -54,7 +52,7 @@ module.exports = function(trigger) {
             />
           </form>
           <button
-            class="my-3 text-blue-dark hover:text-blue-darker focus:text-blue-darker font-medium"
+            class="my-3 link-blue font-medium"
             title="${state.translate('deletePopupCancel')}"
             onclick=${cancel}
           >

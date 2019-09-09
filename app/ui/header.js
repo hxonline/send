@@ -16,15 +16,24 @@ class Header extends Component {
     this.account.render();
     return false;
   }
-
+  // width="340" height="64"
   createElement() {
     const title =
       platform() === 'android'
         ? html`
-            <a class=""><img src="${assets.get('logo.svg')}"/></a>
+            <a class="">
+              <svg class="w-64">
+                <use xlink:href="${assets.get('logo.svg')}#logo" />
+              </svg>
+            </a>
           `
         : html`
-            <a class="" href="/"><img src="${assets.get('logo.svg')}"/></a>
+            <a class="" href="/">
+              <svg class="w-48 md:w-64">
+                <use xlink:href="${assets.get('logo.svg')}#logo" />
+              </svg>
+              <!-- <img src="${assets.get('logo.svg')}#logo"/> -->
+            </a>
           `;
     return html`
       <header
